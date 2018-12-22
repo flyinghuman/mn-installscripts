@@ -253,6 +253,12 @@ maxconnections=256
 logtimestamps=1
 externalip=$DAEMON_IP
 bind=$DAEMON_IP
+addnode=45.76.252.124:10001
+addnode=144.202.83.218:10001
+addnode=144.202.31.140:10001
+addnode=144.202.20.12:10001
+addnode=149.28.202.238:10001
+addnode=45.76.60.34:10001
 EOF
 }
 
