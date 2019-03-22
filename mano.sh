@@ -1,5 +1,6 @@
 #!/bin/bash
 
+COIN_NAME="mano"
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE="mano.conf"
 DEFAULT_USER="mano-mn1"
@@ -101,6 +102,8 @@ function deploy_binary()
 
     #unzip -j ${archive} >/dev/null 2>&1
     tar -xzf ${archive} >/dev/null 2>&1
+    cd ${COIN_NAME}*
+    cd bin
     cp ${DAEMON_BINARY} ${CLI_BINARY} /usr/local/bin/
     chmod +x ${DAEMON_BINARY_FILE} >/dev/null 2>&1
     chmod +x ${CLI_BINARY_FILE} >/dev/null 2>&1
