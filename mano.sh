@@ -1,6 +1,7 @@
 #!/bin/bash
 
 COIN_NAME="mano"
+COIN_FOLDER="manocoin"
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE="mano.conf"
 DEFAULT_USER="mano-mn1"
@@ -197,7 +198,7 @@ function ask_user()
     echo "$USER_NAME:$USER_PASSWORD" | chpasswd
 
     home_dir=$(sudo -H -u $USER_NAME bash -c 'echo $HOME')
-    DATA_DIR="$home_dir/.mano"
+    DATA_DIR="$home_dir/.$(COIN_FOLDER)"
         
     mkdir -p $DATA_DIR
     #mkdir -p $DATA_DIR/mainnet
